@@ -42,3 +42,6 @@ Promises are used to handle asynchronous operations more effectively than tradit
  
 
  setTimeout(2000).then(main);
+
+
+ ![alt text](image.png)
