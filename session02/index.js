@@ -123,3 +123,5 @@ let fs = require('fs');
 //     });
 // }
 // delayfileload(4000).then(readFileData)
+https://app.100xdevs.com/courses/14/430/432
+https://projects.100xdevs.com/tracks/promises-async-await/Promises-and-async--await-5
