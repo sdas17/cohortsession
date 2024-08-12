@@ -72,21 +72,54 @@
 let fs = require('fs');
 
 
-function dumydata(re){
-    setTimeout(()=>{
-     re()
-    },3000)
+// function dumydata(re){
+//     setTimeout(()=>{
+//      re()
+//     },3000)
 
-}
-let p = new Promise(dumydata)
-function readfiledata(){
-fs.readFile('a.txt', 'utf-8', (err, data) => {
-    if (err) {
-        console.error('Error reading the file:', err);
-        return;
-    }
-    console.log(data);
-});
+// }
+// let p = new Promise(dumydata)
+// function readfiledata(){
+// fs.readFile('a.txt', 'utf-8', (err, data) => {
+//     if (err) {
+//         console.error('Error reading the file:', err);
+//         return;
+//     }
+//     console.log(data);
+// });
     
-}
-p.then(readfiledata)
+// }
+// p.then(readfiledata)
+
+
+
+// function setTimeoutPromisified(ms) {
+//     return new Promise(resolve => setTimeout(resolve, ms));
+//   }
+  
+//   function callback() {
+//       console.log("3 seconds have passed");
+//   }
+  
+//   setTimeoutPromisified(3000).then(callback)
+  
+// function delayfileload (time){
+//     return new Promise((resolve)=>{
+//         setTimeout(()=>{
+//             resolve('Delay complete')
+
+//         },time)
+//     })
+
+// }
+// function readFileData(data) {
+    
+//     fs.readFile('a.txt', 'utf-8', (err, data) => {
+//         if (err) {
+//             console.error('Error reading the file:', err);
+//             return;
+//         }
+//         console.log('File data:', data);
+//     });
+// }
+// delayfileload(4000).then(readFileData)
