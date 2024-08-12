@@ -59,13 +59,34 @@
 // });
 // console.log(demodata(1,2,sum))
 
-function random(resolved){
-    setTimeout(resolved,3000)
+// function random(resolved){
+//     setTimeout(resolved,3000)
+
+// }
+// const P = new Promise(random);
+// function callback(){
+//     console.log('Promise succeded');
+    
+// }
+// P.then(callback)
+let fs = require('fs');
+
+
+function dumydata(re){
+    setTimeout(()=>{
+     re()
+    },3000)
 
 }
-const P = new Promise(random);
-function callback(){
-    console.log('Promise succeded');
+let p = new Promise(dumydata)
+function readfiledata(){
+fs.readFile('a.txt', 'utf-8', (err, data) => {
+    if (err) {
+        console.error('Error reading the file:', err);
+        return;
+    }
+    console.log(data);
+});
     
 }
-P.then(callback)
+p.then(readfiledata)
